@@ -3,15 +3,13 @@ let attempt = document.getElementById('attempt');
 
 function guess() {
     let input = document.getElementById('user-guess');
-
-//testing live update!
     
-    if (answer.value == '' || attempt.value == '') {
-        setHiddenFields();
+    if (answer.value == "" || attempt.value == "") {
+        setHiddenFields;
     }
 
     if (!validateInput(input.value)) {
-        return; 
+        return;
     }
     attempt.value++;
 
@@ -25,7 +23,7 @@ function guess() {
         showReplay();
     } else 
     setMessage('Incorrect, try again');
-
+}
 
 function getResults (input){
     let html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6"> ';
@@ -38,7 +36,6 @@ function getResults (input){
             html+= '<span class="glyphicon glyphicon-remove"></span> ';
         }
     }
-}
     html += '</div></div>';
     document.getElementById('results').innerHTML += html;
 
@@ -80,10 +77,9 @@ function showReplay () {
 }
 
 function validateInput (input){
-if (input.length !=4); {
-    setMessage('Guesses must be exactly 4 characters long.');
+if (input.length !=4);{
+    set.message("Guesses must be exactly 4 characters long.");
     return false;
     }
     return true;
-}
-}
+}}
